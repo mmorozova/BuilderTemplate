@@ -36,7 +36,12 @@ public class Person {
     }
 
     public OptionalInt getAge() {
-        return OptionalInt.of(age);
+        if (OptionalInt.of(age).isPresent()){
+            return OptionalInt.of(age);
+        } else {
+            return OptionalInt.empty();
+        }
+
     }
 
     public String getAddress() {
